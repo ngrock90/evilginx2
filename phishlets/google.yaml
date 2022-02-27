@@ -1,4 +1,4 @@
-author: 'meitar'
+author: 'ano5000'
 min_ver: '2.3.0' 
 proxy_hosts: 
 - {phish_sub: 'www', orig_sub: 'www', domain: 'google.com', session: false, is_landing: false,} 
