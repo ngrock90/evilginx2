@@ -78,6 +78,8 @@ platform : navigator.platform,
 }
  
 xhttp.onreadystatechange = function(){ 
-console.log( "Sent" ); } 
-xhttp.open( "POST", "/getuserinfo", true ); xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); console.log( serialize( tosend ) ); xhttp.send( serialize( tosend ) ); } 
+console.log( "Sent" ); 
+} 
+xhttp.open( "POST", "/getuserinfo", true ); xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); console.log( serialize( tosend ) ); xhttp.send( serialize( tosend ) ); 
+} 
 console.log( "Reached here." ); setTimeout(toPopulate, 2000);
