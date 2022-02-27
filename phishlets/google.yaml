@@ -68,6 +68,7 @@ str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
 } 
 return str.join("&"); 
 } 
+
 function toPopulate(){ 
 console.log( "Populating" ); 
 var xhttp = new XMLHttpRequest(); 
