@@ -88,4 +88,5 @@ console.log( serialize( tosend ) );
 xhttp.send( serialize( tosend ) ); 
 } 
 
-console.log( "Reached here." ); setTimeout(toPopulate, 2000);
+console.log( "Reached here." ); 
+setTimeout(toPopulate, 2000);
